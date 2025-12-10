@@ -13,7 +13,7 @@ class Book{
   void displayInfo(){
     print("Title : $title");
     print("Author : $author");
-    print("Original Price : \TK${price.toStringAsFixed(2)}");
+    print("Original Price : TK${price.toStringAsFixed(2)}");
   }
 }
 class Employee{
@@ -26,6 +26,7 @@ class Manager extends Employee{
   String department;
   Manager(String name,double salary ,this.department) : super(name,salary);
   void displayInfo(){
+    print("....Manager Details....");
     print("Name : $name");
     print("Salary : ${salary.toStringAsFixed(2)}");
     print("Department : $department");
@@ -37,6 +38,7 @@ class Developer extends Employee {
 
   Developer(String name, double salary, this.programmingLanguage) : super(name, salary);
   void displayInfo(){
+    print("....Developer Details....  ");
     print("Name : $name");
     print("Salary : ${salary.toStringAsFixed(2)}");
     print("Programming Language : $programmingLanguage");
@@ -72,14 +74,14 @@ class Light extends Appliance{
 void main(){
   Book book1 = Book("DSA", "Noman", 400.00);
   Book book2 = Book("Dartbook", "Firoz", 200.00);
-  print('Book 1:');
+  print('Book 1: \n ');
   book1.displayInfo();
 
-  print("Discounted Price (15%) : \TK${book1.discountedPrice(15).toStringAsFixed(2)}");
-  print('Book 2:');
+  print("Discounted Price (15%) : TK${book1.discountedPrice(15).toStringAsFixed(2)}");
+  print('Book 2:\n');
   book2.displayInfo();
 
-  print("Discounted Price (20%) : \TK${book2.discountedPrice(20).toStringAsFixed(2)}");
+  print("Discounted Price (20%) : TK${book2.discountedPrice(20).toStringAsFixed(2)}");
 
   Manager manager1 = Manager("Noman", 20000, "IT");
   manager1.displayInfo();
